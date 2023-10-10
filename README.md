@@ -1,37 +1,41 @@
-# texsupport.ims_cosponsored-ps
+# PS
 
-## About
+## DESCRIPTION
 
 LaTeX author support files for IMS co-sponsored journal: 
 [Probability Surveys (PS)](https://imstat.org/journals-and-publications/probability-surveys/)
 
-## Contents
+## FILE LIST
 
-The following files are given in the repository (or directly in `.zip` archive):
+-   `ps-sample.tex` - sample article for PS (source file)
+-   `ps-sample.pdf` - sample article for PS (PDF compiled)
+-   `figure1.eps`, `figure1.pdf` - sample figures for `ps-sample.pdf`
+-   `LICENSE` - a copy of the LaTeX Project Public License
+-   `README.md` - this file itself!
+-   `imsart.cls`, `imsart.sty` - LaTeX style files
+-   `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` - BibTeX style files
 
--   `imsart.cls`, `imsart.sty` - LaTeX style files designed for *IMS* co-sponsored journals articles. 
-    Please do not change them. These files are already loaded in the respective template files; 
--   `ps-template.tex` - the main template file should be used for article preparation;
--   `ps-sample.pdf` - instructions for the preparation of a
-    camera-ready paper in LaTeX. This document contains useful information regarding the structure 
-    of your document, proper tagging style, layout features, etc;
--   `figure1.eps`, `figure1.pdf` - sample figures for `ps-sample.pdf`;
--   `ps-sample.tex` - source file for the instructions paper `ps-sample.pdf`;
--   `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` - BibTeX styles to prepare bibliography file.
+## INSTRUCTIONS FOR PS AUTHORS
+
+-   You only need `imsart.cls`, `imsart.sty`, `ps-sample.tex`, and `ps-sample.pdf`
+-   Take the time to read `ps-sample.pdf`
+-   Copy `ps-sample.tex` into `yourname.tex`
+-   Edit `yourname.tex` (update metadata and the content of the paper)
+-   Use `acmtrans-ims.bst`, `imsart-nameyear.bst`, `imsart-number.bst` BibTeX styles to prepare bibliography file. 
     More information can be found [here](http://www.bibtex.org/Using/) 
     or [here](https://www.latex-tutorial.com/tutorials/bibtex/).
+-   Be sure to have `imsart.cls`, `imsart.sty` in the same directory (or any dir scanned for `cls`)
+-   Compile `yourname.tex` to generate `yourname.pdf` with a `pdflatex` or `lualatex` program and check the result
+-   More detailed instructions for authors are available on Internet: https://imstat.org/journals-and-publications/probability-surveys/
 
-## Setup
+## TROUBLESHOOTING
 
--   Clone the repository or download the `.zip` archive;
--   Install LaTeX style files (`imsart.cls`, `imsart.sty`) in your TeX system or 
-    place them in the same directory where your `*.tex` file is;
--   Read the instructions (`ps-sample.pdf`) for the preparation of your LaTeX document;
--   Use the template file `ps-template.tex` to prepare your manuscript.
+-   To remove frame from the text box use document class option `noshowframe`, e.g:
 
-## Bug reports
+        \documentclass[ps,noshowframe]{imsart}
+
+## BUG REPORTS
 
 Please submit bug reports and/or feature requests
 at [GitHub page](https://github.com/vtex-soft/texsupport.ims_cosponsored-ps/issues) or 
 [latex-support@vtex.lt](mailto:latex-support@vtex.lt).
-
